@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>{{.Title}}</title>
+  </head>
+  <body>
+    {{with .Address}}
+    <p>State {{.State}}</p>
+    <p>Cities {{.City}}</p>
+    {{else}}
+    <p>Tidak Punya Alamat</p>
+    {{end}}
+  </body>
+</html>

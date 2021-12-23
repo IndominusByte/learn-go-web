@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>{{.Title}}</title>
+  </head>
+  <body>
+    <h1>List Person</h1>
+    <ul>
+      {{range $index,$person := .Persons}}
+      <li>{{$person.Name}}</li>
+      <ul>
+        {{range $index_two,$hobby := $person.Hobbies}}
+        <li>{{$hobby}}</li>
+        {{end}}
+      </ul>
+      {{end}}
+    </ul>
+  </body>
+</html>

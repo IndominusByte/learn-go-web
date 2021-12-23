@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>{{.Title}}</title>
+</head>
+<body>
+  {{if and (le .Value 100) (ge .Value 80)}}
+  <h1>Very Good</h1>
+  {{else if and (le .Value 79) (ge .Value 60)}}
+  <h1>Good</h1>
+  {{else}}
+  <h1>Bad</h1>
+  {{end}}
+</body>
+</html>
